@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id "org.openjfx.javafxplugin" version "0.0.9"
+    id 'maven-publish'
+}
+
+repositories {
+    mavenLocal()
+    maven {
+        url = uri('https://repo.maven.apache.org/maven2/')
+    }
+}
+
+dependencies {
+    implementation 'org.openjfx:javafx-controls:17.0.2'
+    implementation 'org.openjfx:javafx-fxml:17.0.2'
+    implementation 'org.slf4j:slf4j-simple:2.0.5'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+}
+
+group = 'at.ac.fhcampuswien.snake'
+version = '1.0-SNAPSHOT'
+description = 'snake'
+java.sourceCompatibility = JavaVersion.VERSION_17
+
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+javafx {
+    version = "17"                  // JavaFX Version
+    modules = [ "javafx.controls", "javafx.fxml", "javafx.media" ] // JavaFX modules. Add them to this array.
+}
