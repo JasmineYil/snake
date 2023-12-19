@@ -22,13 +22,11 @@ public class HighscoreController {
     protected Stage stage = null;
 
     public void initialize () {
-        Image logo = new Image("graphics/snake_logo.jpg");
-        this.logo.setImage(logo);
+        this.logo.setImage(new Image("graphics/snake_logo.jpg"));
         this.logo.setPreserveRatio(true);
         this.logo.setSmooth(true);
         this.textBox.setText("Highscores");
         this.textBox.setFont(new Font("Arial", 20));
-
     }
 
     @FXML

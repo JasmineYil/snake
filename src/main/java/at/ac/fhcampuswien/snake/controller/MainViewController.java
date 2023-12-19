@@ -12,14 +12,10 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 
 public class MainViewController {
-
-    private static final Logger LOG = LoggerFactory.getLogger(MainViewController.class);
 
     protected Stage stage = null;
     @FXML
@@ -39,31 +35,22 @@ public class MainViewController {
 
 
     public void initialize() {
-        Image logo = new Image("graphics/snake_logo.jpg");
-        this.logo.setImage(logo);
+        this.logo.setImage(new Image("graphics/snake_logo.jpg"));
         this.logo.setPreserveRatio(true);
         this.logo.setSmooth(true);
         this.textBox.setText("\n\n");
 
-        body.setVgrow(footer, javafx.scene.layout.Priority.ALWAYS);
+        VBox.setVgrow(footer, javafx.scene.layout.Priority.ALWAYS);
         footer.setAlignment(Pos.BOTTOM_CENTER);
     }
 
-    /**
-     * Method that shall be triggered at the click of a button.
-     * Creates a new Scene based on the fxml-file loaded.
-     * Sets the Scene on the stage.
-     * Creates a new GameBoard object.
-     * Starts the game on that gameBoard.
-     * @throws IOException
-     */
     @FXML
     public void startGame() throws IOException {
         String difficulty = comboBox.getValue().toString();
         switch (difficulty) {
-            case "Easy" -> StateManager.difficulty = Constants.Difficulty.EASY;
-            case "Medium" -> StateManager.difficulty = Constants.Difficulty.MEDIUM;
-            case "Hard" -> StateManager.difficulty = Constants.Difficulty.HARD;
+            case "Easy" -> StateManager.setDifficulty(Constants.Difficulty.EASY);
+            case "Medium" -> StateManager.setDifficulty(Constants.Difficulty.MEDIUM);
+            case "Hard" -> StateManager.setDifficulty(Constants.Difficulty.HARD);
         }
         StateManager.switchToGameView();
     }

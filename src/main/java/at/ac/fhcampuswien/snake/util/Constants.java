@@ -24,15 +24,11 @@ public class Constants {
     public static final String GAMEBOARD_COLOR_LIGHT = "FFCC66";
     public static final String GAMEBOARD_COLOR_DARK = "CC9933";
 
-    public final static int INITIAL_SIZE = 4;
-    public final static Direction INITIAL_DIRECTION = Direction.RIGHT;
+    public static final int INITIAL_SIZE = 4;
+    public static final Direction INITIAL_DIRECTION = Direction.RIGHT;
 
     public enum Direction {
         LEFT, RIGHT, UP, DOWN
-    }
-
-    public enum Type {
-        POINTS, CHARACTER, OBSTACLE
     }
 
     public enum Difficulty {
