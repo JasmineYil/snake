@@ -48,6 +48,5 @@ public class HighscoreBoard {
 
         table.setItems(data);
         table.getColumns().addAll(nameCol, scoreCol);
-
     }
 }

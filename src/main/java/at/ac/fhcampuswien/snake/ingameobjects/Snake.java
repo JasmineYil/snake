@@ -62,9 +62,6 @@ public class Snake {
         return segments;
     }
 
-    /**
-     * This method checks if the snakes goes out of the game area or if the head collides with the body segment.
-     */
     public void checkForCollisions(Wall wall) {
         Position head = this.segments.get(0);
 
@@ -104,15 +101,6 @@ public class Snake {
         segments.add(new Position(-1, -1));
     }
 
-    /**
-     * This method updates the position of the snake
-     * based on the current {@link Direction}
-     * To sum up, it will:
-     * - get current head {@link Position}
-     * - calculate new position of head based on current direction
-     * - replace current head with new head
-     * - remove last segment of the snake
-     */
     public void updateSnakePosition() {
 
         Position currentHead = segments.get(0);

@@ -18,13 +18,15 @@ import java.io.IOException;
 
 import static at.ac.fhcampuswien.snake.util.Constants.*;
 
-/**
- * This class is responsible for switching between the different views and managing the gameBoard state.
- */
 public class StateManager {
+
+    private StateManager() {
+        throw new IllegalStateException("Utility class");
+    }
+
     private static Stage stage = null;
 
-    public static Difficulty difficulty = Difficulty.MEDIUM;
+    private static Difficulty difficulty = Difficulty.MEDIUM;
 
     private static GameBoard gameBoard;
 
@@ -35,6 +37,15 @@ public class StateManager {
     public static ScoreBoard getScoreBoard() {
         return scoreBoard;
     }
+
+    public static Difficulty getDifficulty() {
+        return difficulty;
+    }
+
+    public static void setDifficulty(Difficulty difficulty) {
+        StateManager.difficulty = difficulty;
+    }
+
 
     public static void initializeStage(Stage stage) {
         StateManager.stage = stage;
