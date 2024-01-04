@@ -17,4 +17,7 @@ public class Position {
     public int getY() {
         return y;
     }
+
+    public void setPosition(Position location) {
+    }
 }
