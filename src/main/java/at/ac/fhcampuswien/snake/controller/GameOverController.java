@@ -11,10 +11,10 @@ import java.io.IOException;
 public class GameOverController {
 
     @FXML
-    private Text scoreTextField;
+    public Text scoreTextField;
 
     @FXML
-    private VBox highScoreTable;
+    public VBox highScoreTable;
 
 
     public void playNewGame(ActionEvent actionEvent) throws IOException {

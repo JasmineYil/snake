@@ -502,4 +502,43 @@ public class GameBoard {
         drawWalls(gc);
         drawSnake(gc);
     }
+
+
+    public Canvas getGameBoardCanvas() {
+        return gameBoardCanvas;
+    }
+
+    public GraphicsContext getGraphicsContext() {
+        return gc;
+    }
+    public Timeline getTimeline() {
+        return timeline;
+    }
+
+    public Image getSnakeHeadUp() {
+        return snakeHeadUp;
+    }
+
+    public Image getSnakeHeadDown() {
+        return snakeHeadDown;
+    }
+
+    public Image getSnakeHeadLeft() {
+        return snakeHeadLeft;
+    }
+
+    public Image getSnakeHeadRight() {
+        return snakeHeadRight;
+    }
+
+    public Image getSnakeBody() {
+        return snakeBody;
+    }
+
+    public Image getWallPattern() {
+        return wallPattern;
+    }
+
+
+
 }

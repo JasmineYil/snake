@@ -4,7 +4,12 @@ import at.ac.fhcampuswien.snake.util.SoundFX;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.net.URISyntaxException;
+import java.nio.file.Paths;
+
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 @DisplayName("SoundFX Test")
 class SoundFXTest {
@@ -32,4 +37,5 @@ class SoundFXTest {
     void testPlayGameOverSound() {
         assertDoesNotThrow(SoundFX::playGameOverSound);
     }
+
 }

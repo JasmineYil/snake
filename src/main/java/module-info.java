@@ -3,6 +3,8 @@ module at.ac.fhcampuswien.snake {
     requires javafx.fxml;
     requires org.slf4j;
     requires javafx.media;
+    requires javafx.swing;
+
 
 
     opens at.ac.fhcampuswien.snake to javafx.fxml;

@@ -14,7 +14,7 @@ public class HighscoreController {
     public ImageView logo;
 
     @FXML
-    private Label textBox;
+    public Label textBox;
     @FXML
     private VBox highScoreTable;
 

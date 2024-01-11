@@ -1,7 +1,9 @@
 package at.ac.fhcampuswien.snake.util;
 
 import javafx.scene.media.AudioClip;
-
+import java.net.URL;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.net.URISyntaxException;
 import java.util.Objects;
 
@@ -41,4 +43,5 @@ public class SoundFX {
             e.printStackTrace();
         }
     }
+
 }
